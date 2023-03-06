@@ -7,6 +7,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		int scored_points = 0;
+
 		List <Question > questions = new LinkedList <>();
 			questions.add(new OpenQuestion("What is the big O complexity of binary search?", "O(log N)"));
 			questions.add(new OpenQuestion("How would you read an integer i from scanner s in Java?", "i = s.nextInt();", 2));
@@ -17,9 +19,12 @@ public class Main {
 			questions.add(new ThisThatQuestion("Every class must have a constructor", "Right", "Wrong", 1));
 			questions.add(new ThisThatQuestion("Is there a difference between an interface and an abstract class?", "Yes", "No", 0, 5));
 			questions.add(new ThisThatQuestion("Is there a maximum to the amount of constructors a class can have in Java?", "Yes", "No", 1));
+			
 			for ( Question q : questions ) {
-			System .out.print(q);
-}
+			System.out.print(q);
+				if(q.isCorrect(/*answer */));
+					scored_points += q.getScore();
+		}
 
 		
 	}

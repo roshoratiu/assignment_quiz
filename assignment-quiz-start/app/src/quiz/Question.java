@@ -20,7 +20,7 @@ public abstract class Question {
     }
 
     public String toString(){
-        return String.format("The correct ansewer is: %s", correctAnswer());
+        return String.format(showQuestion());
     }
 
     public boolean isCorrect ( String answer ){

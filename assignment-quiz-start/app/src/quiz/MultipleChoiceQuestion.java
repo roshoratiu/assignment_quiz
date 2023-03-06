@@ -30,7 +30,12 @@ public class MultipleChoiceQuestion extends Question{
 
     @Override
     public String toString(){
-        return String.format("%s \n a) %s \n b) %s \n c) %s \n d) %s \n", showQuestion(), QueAnswers[0], QueAnswers[1], QueAnswers[2], QueAnswers[3]);
+        String info = "";
+        String [] alpabet = {"a)", "b)", "c)", "d)", "e)", "f)", "g)", "h)", "i)", "j)", "k)", "l)", "m)", "n)", "o)", "p)", "q)", "r)", "s)", "t)", "u)", "v)", "w)", "x)", "y)", "z)"};
+        for(int i = 0; i < QueAnswers.length; i++)
+        info = info + alpabet[i] + " " + QueAnswers[i] + "\n";
+
+        return showQuestion() + info;
     }
     
     

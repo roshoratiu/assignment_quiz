@@ -10,9 +10,15 @@ public class OpenQuestion extends Question {
         this(question, answer, 0);
     }
 
+    public boolean isCorrect ( String answer ){
+        if(answer.equalsIgnoreCase(Canswer))
+         return true;
+         else return false;
+     }
+
     @Override
     public String toString(){
-        return String.format("The correct ansewer is: %s, and you scored %d", correctAnswer(), getScore());
+        return String.format("%s \n", showQuestion());
     }
     
 }

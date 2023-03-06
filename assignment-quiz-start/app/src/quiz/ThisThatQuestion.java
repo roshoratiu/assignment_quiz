@@ -19,6 +19,6 @@ public class ThisThatQuestion extends MultipleChoiceQuestion{
 
     @Override
     public String toString(){
-        return String.format("Right or Wrong: %s", showQuestion());
+        return String.format("Right or Wrong: %s \n", showQuestion());
     }
 }
